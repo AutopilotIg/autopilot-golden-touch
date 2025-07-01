@@ -314,7 +314,7 @@ const Index = () => {
               size="lg" 
               variant="outline"
               className="border-2 border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black font-bold px-12 py-4 text-lg rounded-full transform hover:scale-105 transition-all duration-300 flex items-center"
-              onClick={() => window.open('https://instagram.com/autopilot', '_blank')}
+              onClick={() => window.open('https://instagram.com/autopilot.ig', '_blank')}
             >
               <Instagram className="mr-3 h-6 w-6" />
               Síguenos en Instagram
