@@ -4,8 +4,10 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Bot, MessageSquare, Palette, Globe, Brain, Zap, Clock, TrendingUp, Users, Star, Shield, ArrowRight, Instagram, MessageCircle, ChevronDown } from "lucide-react";
 import { useState } from "react";
+
 const Index = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+
   const services = [{
     icon: Bot,
     title: "Chatbot Inteligente",
@@ -95,7 +97,7 @@ const Index = () => {
             Automatiza tu Instagram con IA avanzada. Chatbots inteligentes, contenido automático y estrategias que convierten seguidores en clientes mientras duermes.
           </p>
           
-          <Button size="lg" className="bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-500 hover:to-yellow-400 text-black font-bold px-12 py-4 text-lg rounded-full transform hover:scale-105 transition-all duration-300 shadow-2xl shadow-yellow-500/25">
+          <Button size="lg" className="bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-500 hover:to-yellow-400 text-black font-bold px-12 py-4 text-lg rounded-full transform hover:scale-105 transition-all duration-300 shadow-2xl shadow-yellow-500/25" onClick={() => window.open('https://www.instagram.com/autopilot.ig', '_blank')}>
             Comenzar Ahora
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
@@ -234,9 +236,12 @@ const Index = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <Button size="lg" className="bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-500 hover:to-yellow-400 text-black font-bold px-12 py-4 text-lg rounded-full transform hover:scale-105 transition-all duration-300 shadow-2xl shadow-yellow-500/25" onClick={() => window.open('https://www.instagram.com/autopilot.ig', '_blank')}>
+              Comenzar Ahora
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
             
-            
-            <Button size="lg" variant="outline" className="border-2 border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black font-bold px-12 py-4 text-lg rounded-full transform hover:scale-105 transition-all duration-300 flex items-center" onClick={() => window.open('https://instagram.com/autopilot', '_blank')}>
+            <Button size="lg" variant="outline" className="border-2 border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black font-bold px-12 py-4 text-lg rounded-full transform hover:scale-105 transition-all duration-300 flex items-center" onClick={() => window.open('https://www.instagram.com/autopilot.ig', '_blank')}>
               <Instagram className="mr-3 h-6 w-6" />
               Síguenos en Instagram
             </Button>
@@ -264,4 +269,5 @@ const Index = () => {
       </footer>
     </div>;
 };
+
 export default Index;
