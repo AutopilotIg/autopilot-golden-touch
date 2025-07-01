@@ -2,125 +2,81 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { 
-  Bot, 
-  MessageSquare, 
-  Palette, 
-  Globe, 
-  Brain, 
-  Zap,
-  Clock,
-  TrendingUp,
-  Users,
-  Star,
-  Shield,
-  ArrowRight,
-  Instagram,
-  MessageCircle,
-  ChevronDown
-} from "lucide-react";
+import { Bot, MessageSquare, Palette, Globe, Brain, Zap, Clock, TrendingUp, Users, Star, Shield, ArrowRight, Instagram, MessageCircle, ChevronDown } from "lucide-react";
 import { useState } from "react";
-
 const Index = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-
-  const services = [
-    {
-      icon: Bot,
-      title: "Chatbot Inteligente",
-      description: "Automatiza las respuestas a tus clientes 24/7 con IA avanzada que entiende y responde naturalmente."
-    },
-    {
-      icon: MessageSquare,
-      title: "Mensajería Automática",
-      description: "Envía mensajes personalizados y secuencias automatizadas que nutren y convierten leads."
-    },
-    {
-      icon: Palette,
-      title: "Generación de Contenido",
-      description: "Crea contenido visual y textual de alta calidad para mantener tu Instagram siempre activo."
-    },
-    {
-      icon: Globe,
-      title: "Diseño Web Profesional",
-      description: "Páginas web modernas y optimizadas que convierten visitantes en clientes."
-    },
-    {
-      icon: Brain,
-      title: "Asistencia IA",
-      description: "Soporte inteligente que aprende de tu negocio para brindar respuestas precisas."
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: Clock,
-      title: "Ahorra 80% del tiempo",
-      description: "Automatiza tareas repetitivas y enfócate en hacer crecer tu negocio"
-    },
-    {
-      icon: TrendingUp,
-      title: "Aumenta ventas 300%",
-      description: "Respuestas instantáneas que convierten más leads en clientes"
-    },
-    {
-      icon: Users,
-      title: "Atención 24/7",
-      description: "Nunca pierdas un cliente por no estar disponible"
-    },
-    {
-      icon: Shield,
-      title: "100% Confiable",
-      description: "Tecnología probada por miles de empresas exitosas"
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "María González",
-      business: "Fashion Store",
-      text: "Desde que implementé AUTOPILOT, mis ventas aumentaron 250%. El chatbot responde mejor que yo misma.",
-      rating: 5
-    },
-    {
-      name: "Carlos Ruiz",
-      business: "Digital Agency",
-      text: "La automatización de mensajes ha sido increíble. Ahora puedo manejar 10 veces más clientes sin esfuerzo.",
-      rating: 5
-    },
-    {
-      name: "Ana Martínez",
-      business: "Beauty Salon",
-      text: "El contenido generado automáticamente mantiene mi Instagram activo y mis clientes siempre comprometidos.",
-      rating: 5
-    }
-  ];
-
-  const faqs = [
-    {
-      question: "¿Qué tan rápido puedo ver resultados?",
-      answer: "Los primeros resultados son inmediatos. Una vez configurado, tu chatbot estará respondiendo al instante y verás un aumento en engagement en las primeras 24 horas."
-    },
-    {
-      question: "¿Necesito conocimientos técnicos?",
-      answer: "No necesitas ningún conocimiento técnico. Nosotros nos encargamos de toda la configuración y te enseñamos a usar el sistema de manera simple."
-    },
-    {
-      question: "¿Funciona con cualquier tipo de negocio?",
-      answer: "Sí, AUTOPILOT se adapta a cualquier industria: e-commerce, servicios, restaurantes, salones de belleza, consultorías y más."
-    },
-    {
-      question: "¿Qué soporte incluye?",
-      answer: "Incluye configuración completa, capacitación personalizada, soporte técnico 24/7 y actualizaciones gratuitas del sistema."
-    },
-    {
-      question: "¿Puedo personalizar las respuestas?",
-      answer: "Completamente. El sistema aprende de tu negocio y puedes personalizar cada respuesta para que suene exactamente como tu marca."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-black text-white">
+  const services = [{
+    icon: Bot,
+    title: "Chatbot Inteligente",
+    description: "Automatiza las respuestas a tus clientes 24/7 con IA avanzada que entiende y responde naturalmente."
+  }, {
+    icon: MessageSquare,
+    title: "Mensajería Automática",
+    description: "Envía mensajes personalizados y secuencias automatizadas que nutren y convierten leads."
+  }, {
+    icon: Palette,
+    title: "Generación de Contenido",
+    description: "Crea contenido visual y textual de alta calidad para mantener tu Instagram siempre activo."
+  }, {
+    icon: Globe,
+    title: "Diseño Web Profesional",
+    description: "Páginas web modernas y optimizadas que convierten visitantes en clientes."
+  }, {
+    icon: Brain,
+    title: "Asistencia IA",
+    description: "Soporte inteligente que aprende de tu negocio para brindar respuestas precisas."
+  }];
+  const benefits = [{
+    icon: Clock,
+    title: "Ahorra 80% del tiempo",
+    description: "Automatiza tareas repetitivas y enfócate en hacer crecer tu negocio"
+  }, {
+    icon: TrendingUp,
+    title: "Aumenta ventas 300%",
+    description: "Respuestas instantáneas que convierten más leads en clientes"
+  }, {
+    icon: Users,
+    title: "Atención 24/7",
+    description: "Nunca pierdas un cliente por no estar disponible"
+  }, {
+    icon: Shield,
+    title: "100% Confiable",
+    description: "Tecnología probada por miles de empresas exitosas"
+  }];
+  const testimonials = [{
+    name: "María González",
+    business: "Fashion Store",
+    text: "Desde que implementé AUTOPILOT, mis ventas aumentaron 250%. El chatbot responde mejor que yo misma.",
+    rating: 5
+  }, {
+    name: "Carlos Ruiz",
+    business: "Digital Agency",
+    text: "La automatización de mensajes ha sido increíble. Ahora puedo manejar 10 veces más clientes sin esfuerzo.",
+    rating: 5
+  }, {
+    name: "Ana Martínez",
+    business: "Beauty Salon",
+    text: "El contenido generado automáticamente mantiene mi Instagram activo y mis clientes siempre comprometidos.",
+    rating: 5
+  }];
+  const faqs = [{
+    question: "¿Qué tan rápido puedo ver resultados?",
+    answer: "Los primeros resultados son inmediatos. Una vez configurado, tu chatbot estará respondiendo al instante y verás un aumento en engagement en las primeras 24 horas."
+  }, {
+    question: "¿Necesito conocimientos técnicos?",
+    answer: "No necesitas ningún conocimiento técnico. Nosotros nos encargamos de toda la configuración y te enseñamos a usar el sistema de manera simple."
+  }, {
+    question: "¿Funciona con cualquier tipo de negocio?",
+    answer: "Sí, AUTOPILOT se adapta a cualquier industria: e-commerce, servicios, restaurantes, salones de belleza, consultorías y más."
+  }, {
+    question: "¿Qué soporte incluye?",
+    answer: "Incluye configuración completa, capacitación personalizada, soporte técnico 24/7 y actualizaciones gratuitas del sistema."
+  }, {
+    question: "¿Puedo personalizar las respuestas?",
+    answer: "Completamente. El sistema aprende de tu negocio y puedes personalizar cada respuesta para que suene exactamente como tu marca."
+  }];
+  return <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-6">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
@@ -139,11 +95,7 @@ const Index = () => {
             Automatiza tu Instagram con IA avanzada. Chatbots inteligentes, contenido automático y estrategias que convierten seguidores en clientes mientras duermes.
           </p>
           
-          <Button 
-            size="lg" 
-            className="bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-500 hover:to-yellow-400 text-black font-bold px-12 py-4 text-lg rounded-full transform hover:scale-105 transition-all duration-300 shadow-2xl shadow-yellow-500/25"
-            onClick={() => window.open('https://www.instagram.com/autopilot.ig', '_blank')}
-          >
+          <Button size="lg" className="bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-500 hover:to-yellow-400 text-black font-bold px-12 py-4 text-lg rounded-full transform hover:scale-105 transition-all duration-300 shadow-2xl shadow-yellow-500/25">
             Comenzar Ahora
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
@@ -167,8 +119,7 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="bg-gray-900/50 border-gray-800 hover:border-yellow-500/50 transition-all duration-300 group hover:transform hover:scale-105">
+            {services.map((service, index) => <Card key={index} className="bg-gray-900/50 border-gray-800 hover:border-yellow-500/50 transition-all duration-300 group hover:transform hover:scale-105">
                 <CardContent className="p-8">
                   <div className="w-16 h-16 bg-gradient-to-r from-yellow-600 to-yellow-500 rounded-full flex items-center justify-center mb-6 group-hover:shadow-lg group-hover:shadow-yellow-500/25 transition-all duration-300">
                     <service.icon className="h-8 w-8 text-black" />
@@ -180,8 +131,7 @@ const Index = () => {
                     {service.description}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -199,8 +149,7 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center group">
+            {benefits.map((benefit, index) => <div key={index} className="text-center group">
                 <div className="w-20 h-20 bg-gradient-to-r from-yellow-600 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg group-hover:shadow-yellow-500/25 transition-all duration-300">
                   <benefit.icon className="h-10 w-10 text-black" />
                 </div>
@@ -210,8 +159,7 @@ const Index = () => {
                 <p className="text-gray-400 leading-relaxed">
                   {benefit.description}
                 </p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -229,13 +177,10 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-gray-900/50 border-gray-800 hover:border-yellow-500/50 transition-all duration-300">
+            {testimonials.map((testimonial, index) => <Card key={index} className="bg-gray-900/50 border-gray-800 hover:border-yellow-500/50 transition-all duration-300">
                 <CardContent className="p-8">
                   <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                    ))}
+                    {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />)}
                   </div>
                   <p className="text-gray-300 mb-6 italic leading-relaxed">
                     "{testimonial.text}"
@@ -245,8 +190,7 @@ const Index = () => {
                     <p className="text-yellow-400 text-sm">{testimonial.business}</p>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -261,29 +205,18 @@ const Index = () => {
           </div>
           
           <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <Card key={index} className="bg-gray-900/50 border-gray-800">
+            {faqs.map((faq, index) => <Card key={index} className="bg-gray-900/50 border-gray-800">
                 <CardContent className="p-0">
-                  <button
-                    className="w-full text-left p-6 hover:bg-gray-800/50 transition-colors flex items-center justify-between"
-                    onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                  >
+                  <button className="w-full text-left p-6 hover:bg-gray-800/50 transition-colors flex items-center justify-between" onClick={() => setOpenFaq(openFaq === index ? null : index)}>
                     <span className="font-bold text-lg text-white">{faq.question}</span>
-                    <ChevronDown 
-                      className={`h-5 w-5 text-yellow-400 transition-transform ${
-                        openFaq === index ? 'rotate-180' : ''
-                      }`} 
-                    />
+                    <ChevronDown className={`h-5 w-5 text-yellow-400 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
                   </button>
-                  {openFaq === index && (
-                    <div className="px-6 pb-6">
+                  {openFaq === index && <div className="px-6 pb-6">
                       <Separator className="mb-4 bg-gray-700" />
                       <p className="text-gray-400 leading-relaxed">{faq.answer}</p>
-                    </div>
-                  )}
+                    </div>}
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -301,21 +234,9 @@ const Index = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button 
-              size="lg" 
-              className="bg-green-600 hover:bg-green-500 text-white font-bold px-12 py-4 text-lg rounded-full transform hover:scale-105 transition-all duration-300 shadow-2xl shadow-green-500/25 flex items-center"
-              onClick={() => window.open('https://wa.me/1234567890?text=Hola, quiero información sobre AUTOPILOT', '_blank')}
-            >
-              <MessageCircle className="mr-3 h-6 w-6" />
-              Contactar por WhatsApp
-            </Button>
             
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="border-2 border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black font-bold px-12 py-4 text-lg rounded-full transform hover:scale-105 transition-all duration-300 flex items-center"
-              onClick={() => window.open('https://instagram.com/autopilot.ig', '_blank')}
-            >
+            
+            <Button size="lg" variant="outline" className="border-2 border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black font-bold px-12 py-4 text-lg rounded-full transform hover:scale-105 transition-all duration-300 flex items-center" onClick={() => window.open('https://instagram.com/autopilot', '_blank')}>
               <Instagram className="mr-3 h-6 w-6" />
               Síguenos en Instagram
             </Button>
@@ -341,8 +262,6 @@ const Index = () => {
           </p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
