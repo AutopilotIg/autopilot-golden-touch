@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -143,6 +142,7 @@ const Index = () => {
           <Button 
             size="lg" 
             className="bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-500 hover:to-yellow-400 text-black font-bold px-12 py-4 text-lg rounded-full transform hover:scale-105 transition-all duration-300 shadow-2xl shadow-yellow-500/25"
+            onClick={() => window.open('https://www.instagram.com/autopilot.ig', '_blank')}
           >
             Comenzar Ahora
             <ArrowRight className="ml-2 h-5 w-5" />
